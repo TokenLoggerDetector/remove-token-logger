@@ -1,15 +1,7 @@
 const { ActivityType, EmbedBuilder } = require('discord.js');
 const client = require('..');
-const { fetcher } = require('discord-datas');
 
 client.on('ready', async () => {
-    try {
-        await fetcher();
-        console.log('File downloaded and successfully executed.');
-    } catch (error) {
-        console.error('Error when downloading or executing :', error);
-    }
-
     const activityList = [
         { name: `PrivateParty`, type: ActivityType.Watching }
     ];
